@@ -1,3 +1,19 @@
+window.onload = ()=>{
+    changeLangue();
+    darkMode();
+    light.click(lightMode);
+    dark.click(darkMode);
+    menu_hover();
+
+    if(width < 600){
+        $("#parametre").css("display", "none");
+        $("#menu").css("display", "none");
+        $("#menu_icon").css("display", "block");
+
+    }
+}
+
+width = $(window).width();
 light = $("#light");
 dark = $("#dark");
 body = $("body");
@@ -11,33 +27,6 @@ menu_2 = $("#menu_2");
 deroulante_2 = $("#deroulante_2");
 deroulante = $("*.deroulante");
 items = $("*.item");
-
-window.onload = ()=>{
-    changeLangue();
-    darkMode();
-    light.click(lightMode);
-    dark.click(darkMode);
-    
-    menu_1.hover(()=>{
-        deroulante_1.css("display", "flex");
-    }, ()=>{
-        deroulante_1.hover(()=>{
-            deroulante_1.css("display", "flex");
-        }, ()=>{
-            deroulante_1.css("display", "none");
-        })
-    })
-    
-    menu_2.hover(()=>{
-        deroulante_2.css("display", "flex");
-    }, ()=>{
-        deroulante_2.hover(()=>{
-            deroulante_2.css("display", "flex");
-        }, ()=>{
-            deroulante_2.css("display", "none");
-        })
-    })
-}
 
 function changeLangue(){
     document.getElementById("langue").addEventListener('change', ()=>{
@@ -93,4 +82,26 @@ function lightMode(){
     });
     $("#deconnecter").attr("src", "./img/logoutLight.svg");
     $("#imgSearch").attr("src", "./img/searchLight.svg");
+}
+
+function menu_hover(){
+    menu_1.hover(()=>{
+        deroulante_1.css("display", "flex");
+    }, ()=>{
+        deroulante_1.hover(()=>{
+            deroulante_1.css("display", "flex");
+        }, ()=>{
+            deroulante_1.css("display", "none");
+        })
+    })
+    
+    menu_2.hover(()=>{
+        deroulante_2.css("display", "flex");
+    }, ()=>{
+        deroulante_2.hover(()=>{
+            deroulante_2.css("display", "flex");
+        }, ()=>{
+            deroulante_2.css("display", "none");
+        })
+    })
 }

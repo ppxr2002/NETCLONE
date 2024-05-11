@@ -73,6 +73,9 @@ select:focus option {
     align-items: center;
     width: 120px;
 }
+#menu_icon{
+    display: none;
+}
 
 #menu{
     width: 98%;
@@ -140,11 +143,14 @@ select:focus option {
     align-items: center;
     margin-bottom: 70px;
 }
+#boxSearch{
+    width: 300px;
+}
 #search input{
     color: #FFFFFF;
     font-size: 16px;
     margin-right: 10px;
-    width: 220px;
+    width: 90%;
 }
 #search div{
     display: flex;
@@ -191,4 +197,10 @@ footer{
 }
 footer p{
     opacity: 0.5;
+}
+
+@media only screen and (max-width:600px) {
+    #boxSearch{
+        width: 100%;
+    }
 }
