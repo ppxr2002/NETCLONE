@@ -67,13 +67,13 @@ select:focus{
 select:focus option {
     background-color: #000000; /* Changer la couleur de fond en jaune */
 }
-#parametre{
+#parametre, #parametre_icon{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120px;
+    gap: 20px;
 }
-#menu_icon{
+#img_menu_icon{
     display: none;
 }
 
@@ -158,6 +158,44 @@ select:focus option {
     border: 1px #FFFFFF solid;
     border-radius: 5px;
     padding: 10px;
+}
+
+/* MENU ICON */
+#exit{
+    margin: 10px 0 10px 0;
+}
+#menu_icon {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    align-items: start;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: max-content;
+    height: 100vh;
+    padding: 10px 20px 0 20px;
+    background-color: #1D1D1D;
+    border: 1px #E2E2E2 solid;
+}
+.box_menu_icon{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 0 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.menu_icon span{
+    display: flex;
+    gap: 10px;
+}
+.deroulante_icon{
+    display: none;
+}
+.active{
+    display: flex;
+    flex-direction: column;
 }
 
 /* MAIN */
